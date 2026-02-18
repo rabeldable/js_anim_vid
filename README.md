@@ -12,7 +12,7 @@ Repository layout (example)
 Example local folder for preview
 
 Place the files and images together in a single folder for local preview, for example:
-
+```bash
   ./thumbs/
     index.html
     styles.css
@@ -21,14 +21,14 @@ Place the files and images together in a single folder for local preview, for ex
     image1.png
     image2.png
     ...
-
+```
 Run locally
 
 1. Change to the folder containing the files and images.
 2. Start a simple HTTP server:
-
+```bash
    python3 -m http.server 8008
-
+```
 3. Open http://localhost:8008 in a browser and inspect DevTools (Network & Console) for issues.
 
 Design goals
@@ -51,12 +51,13 @@ styles.css
 manifest.json
 - Preferred source of filenames. Structure: a JSON array of strings.
 - Example:
-
+```bash
   [
     "image1.png",
     "image2.png",
     "subdir/image3.png"
   ]
+```
 
 - Entries may be plain filenames (the loader prefixes './') or relative/absolute URLs. The loader normalizes entries before fetching.
 
@@ -111,14 +112,16 @@ Manifest generation example (Python)
 
 To auto-generate a manifest.json from the current directory (example):
 
-  # run inside the images directory
-  python3 - <<PY
-  import os, json
-  files = sorted([f for f in os.listdir('.') if f.lower().endswith(('.png','.jpg','.jpeg'))])
-  with open('manifest.json', 'w') as fh:
-      json.dump(files, fh, indent=2)
-  print('Wrote manifest.json with', len(files), 'entries')
+```bash
+# run inside the images directory
+ python3 - <<PY
+ import os, json
+ files = sorted([f for f in os.listdir('.') if f.lower().endswith(('.png','.jpg','.jpeg'))])
+   with open('manifest.json', 'w') as fh:
+       json.dump(files, fh, indent=2)
+    print('Wrote manifest.json with', len(files), 'entries')
   PY
+```
 
 Troubleshooting checklist
 
