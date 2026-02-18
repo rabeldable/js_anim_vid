@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arc Thumbnails — directory demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Small inline defaults in case styles.css is missing */
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f6f8fa;color:#222}
+    .controls{padding:10px;background:#fff;border-bottom:1px solid #e6e6e6;display:flex;gap:12px;align-items:center}
+    .controls label{font-size:13px}
+    .canvas-wrap{height:68vh;display:flex;align-items:center;justify-content:center;padding:8px}
+    #stage{width:100%;height:100%;display:block;background:linear-gradient(180deg,#f0fbff 0%,#fff 40%)}
+    .hint{font-size:12px;color:#666}
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <div>
+      <strong>Arc Thumbnails Demo</strong>
+      <div class="hint">Place this file in same folder as your PNG thumbnails and run python3 -m http.server</div>
+    </div>
+
+    <label>Preload <input id="count" type="number" value="12" min="1" max="200" style="width:70px"></label>
+    <label>Smooth scale <input id="smooth" type="checkbox"></label>
+    <button id="restart">Reload &amp; Restart</button>
+    <button id="fitEndpoints">Fit endpoints</button>
+    <div style="margin-left:auto;font-size:13px">
+      <span class="hint">Shift+click =&gt; set Start • Alt/Ctrl+click =&gt; set End</span>
+    </div>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="stage"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+:root{--bg:#f7f7f8}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#111}
+.controls{padding:12px;background:#fff;border-bottom:1px solid #e6e6e6}
+.controls h3{margin:0 0 6px}
+.controls .muted{margin:4px 0;color:#666;font-size:13px}
+.controls label{margin-right:12px;font-size:14px}
+.canvas-wrap{height:560px;display:flex;align-items:center;justify-content:center;padding:8px}
+#stage{width:100%;height:100%;display:block;background:linear-gradient(180deg,#e9f7ff 0%, #fff 40%)}
