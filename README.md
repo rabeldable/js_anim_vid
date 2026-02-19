@@ -2,6 +2,8 @@
 
 This README describes the Arc Thumbnails demo at the component level. It is intended as a technical reference for developers integrating or running the demo in a local repository. As mentioned in the following youtube video: https://www.youtube.com/watch?v=wFdvBioQ7Ng
 
+[![Watch the video](https://img.youtube.com/vi/wFdvBioQ7Ng/0.jpg)](https://www.youtube.com/watch?v=wFdvBioQ7Ng)
+
 Repository layout (example)
 
 - index.html — UI surface and canvas container. Minimal controls: preload count, smooth scale toggle, restart, fit endpoints.
